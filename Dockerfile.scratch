@@ -1,0 +1,9 @@
+FROM golang:1.8
+WORKDIR /go/src/break
+
+# Copy the local package files to the container's workspace.
+ADD . /go/src/break
+
+RUN go install -v ./
+
+#ENTRYPOINT /go/bin/break
